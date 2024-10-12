@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw_50dp"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/tv_account_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw_10dp"
+            android:text="@string/please"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sw_22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_config_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw_10dp"
+            android:background="@drawable/account_config_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingLeft="@dimen/sw_20dp"
+            android:paddingRight="@dimen/sw_20dp"
+            android:text="@string/config_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sw_22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_account_tip"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/sw_10dp"
+            android:background="@drawable/options_default"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tablayout_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw_50dp"
+        android:background="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_top">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:tabPaddingStart="@dimen/sw_20dp"
+            app:tabTextColor="@color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/sw_100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_tablayout_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

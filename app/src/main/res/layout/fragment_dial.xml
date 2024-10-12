@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="@dimen/sw_4dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/sw_40dp"
+        android:background="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 左侧通话记录 -->
+
+
+    <!-- 右侧拨号界面-->
+    <EditText
+        android:id="@+id/et_dial_number"
+        android:layout_width="@dimen/sw_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/sw_50dp"
+        android:layout_marginTop="@dimen/sw_5dp"
+        android:layout_marginRight="@dimen/sw_50dp"
+        android:gravity="center"
+        android:hint="@string/dail_tip"
+        app:layout_constraintLeft_toRightOf="@+id/view_divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_divider" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/view_divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_dial_number">
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit1"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_one"
+            android:soundEffectsEnabled="true"
+            android:text="1"
+            tools:ignore="MissingConstraints" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit2"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_two"
+            android:soundEffectsEnabled="true"
+            android:text="2"
+            app:layout_constraintLeft_toRightOf="@id/Digit1"
+            tools:ignore="MissingConstraints" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit3"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_three"
+            android:soundEffectsEnabled="true"
+            android:text="3"
+            app:layout_constraintLeft_toRightOf="@id/Digit2"
+            app:layout_constraintVertical_weight="1"
+            tools:ignore="MissingConstraints" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit4"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_four"
+            android:soundEffectsEnabled="true"
+            android:text="4"
+            app:layout_constraintTop_toBottomOf="@id/Digit1"
+            tools:ignore="MissingConstraints" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit5"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_five"
+            android:soundEffectsEnabled="true"
+            android:text="5"
+            app:layout_constraintLeft_toRightOf="@id/Digit4"
+            app:layout_constraintTop_toBottomOf="@id/Digit1" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit6"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_six"
+            android:soundEffectsEnabled="true"
+            android:text="6"
+            app:layout_constraintLeft_toRightOf="@id/Digit5"
+            app:layout_constraintTop_toBottomOf="@id/Digit1" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit7"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_seven"
+            android:soundEffectsEnabled="true"
+            android:text="7"
+            app:layout_constraintTop_toBottomOf="@id/Digit4" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit8"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_eight"
+            android:soundEffectsEnabled="true"
+            android:text="8"
+            app:layout_constraintLeft_toRightOf="@id/Digit7"
+            app:layout_constraintTop_toBottomOf="@id/Digit4" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit9"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_nine"
+            android:soundEffectsEnabled="true"
+            android:text="9"
+            app:layout_constraintLeft_toRightOf="@id/Digit8"
+            app:layout_constraintTop_toBottomOf="@id/Digit4" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/DigitStar"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_star_digit"
+            android:soundEffectsEnabled="true"
+            android:text="*"
+            app:layout_constraintTop_toBottomOf="@id/Digit7" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/Digit00"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_zero"
+            android:soundEffectsEnabled="true"
+            android:text="0+"
+            app:layout_constraintLeft_toRightOf="@id/DigitStar"
+            app:layout_constraintTop_toBottomOf="@id/Digit7" />
+
+        <org.droidtv.sip.dialer.views.Digit
+            android:id="@+id/DigitHash"
+            style="@style/DialerDigit"
+            android:background="@drawable/numpad_sharp"
+            android:soundEffectsEnabled="true"
+            android:text="#"
+            app:layout_constraintLeft_toRightOf="@id/Digit00"
+            app:layout_constraintTop_toBottomOf="@id/Digit7" />
+
+        <org.droidtv.sip.dialer.views.EraseButton
+            android:id="@+id/erase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/sw_20dp"
+            android:contentDescription="@string/content_description_backspace"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/backspace"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DigitHash" />
+
+        <org.droidtv.sip.call.views.CallButton
+            android:id="@+id/start_call"
+            android:layout_width="@dimen/sw_150dp"
+            android:layout_height="@dimen/sw_40dp"
+            android:layout_marginRight="@dimen/sw_20dp"
+            android:background="@drawable/call_bg"
+            android:contentDescription="@string/content_description_call"
+            android:padding="12dp"
+            android:src="@drawable/call_audio_start"
+            app:layout_constraintBottom_toBottomOf="@id/erase"
+            app:layout_constraintRight_toLeftOf="@id/erase"
+            app:layout_constraintTop_toTopOf="@id/erase" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
