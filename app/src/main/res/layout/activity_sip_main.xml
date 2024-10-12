@@ -7,18 +7,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_top"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sw_50dp"
-        android:background="@color/black">
+        android:layout_height="@dimen/sw_45dp"
+        android:background="@color/sip_bg">
 
         <TextView
             android:id="@+id/tv_account_tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw_10dp"
+            android:layout_marginLeft="@dimen/sw_22_5dp"
+            android:layout_marginTop="@dimen/sw_15dp"
             android:text="@string/please"
             android:textColor="@color/white"
-            android:textSize="@dimen/sw_22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/sw_12sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,16 +26,18 @@
             android:id="@+id/tv_config_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw_10dp"
+            android:layout_marginLeft="@dimen/sw_3dp"
+            android:layout_marginTop="@dimen/sw_12dp"
             android:background="@drawable/account_config_bg"
             android:clickable="true"
             android:focusable="true"
-            android:paddingLeft="@dimen/sw_20dp"
-            android:paddingRight="@dimen/sw_20dp"
+            android:paddingLeft="@dimen/sw_8dp"
+            android:paddingTop="@dimen/sw_3dp"
+            android:paddingRight="@dimen/sw_8dp"
+            android:paddingBottom="@dimen/sw_3dp"
             android:text="@string/config_account"
             android:textColor="@color/white"
-            android:textSize="@dimen/sw_22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/sw_12sp"
             app:layout_constraintLeft_toRightOf="@+id/tv_account_tip"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,17 +45,19 @@
             android:id="@+id/iv_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/sw_10dp"
-            android:background="@drawable/options_default"
-            app:layout_constraintRight_toRightOf="parent" />
+            android:layout_marginTop="@dimen/sw_12dp"
+            android:layout_marginRight="@dimen/sw_22_5dp"
+            android:background="@drawable/Configuration_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_tablayout_container"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sw_50dp"
-        android:background="@color/gray"
+        android:layout_height="@dimen/sw_36dp"
+        android:background="@color/sip_tab_bg"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_top">
 
@@ -71,7 +75,8 @@
         android:id="@+id/viewpage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/sw_100dp"
+        android:layout_marginTop="@dimen/sw_81dp"
+        android:background="@color/sip_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_tablayout_container" />
 </androidx.constraintlayout.widget.ConstraintLayout>

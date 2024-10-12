@@ -7,6 +7,9 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="sip_bg">#15191E</color>
+    <color name="sip_account_config_bg">#0071DB</color>
+    <color name="sip_tab_bg">#2D353E</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#DCDCDC</color>
     <color name="primary_color">#ff5e00
